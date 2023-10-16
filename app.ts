@@ -12,7 +12,8 @@ function add(number1: number, number2: number, showResult: boolean, phrase: stri
   }
 }
 
-const number1 = 5;
+let number1: number;
+number1 = 5;
 const number2 = 2.8;
 const printResult = true;
 const resultPhrase = "Result is: ";
