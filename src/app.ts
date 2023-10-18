@@ -52,3 +52,14 @@ const sum = (...numbers: number[]) => numbers.reduce((curResult, curValue) => cu
 const addedNumbers = sum(5, 10, 2, 3.7);
 
 console.log(addedNumbers);
+
+// const hobby1 = hobbies[0];
+// const hobby2 = hobbies[1];
+
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+
+console.log(hobbies, hobby1, hobby2);
+
+// const { firstName: userName, age } = prsn;
+
+console.log(userName, age, prsn);
