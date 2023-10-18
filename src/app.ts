@@ -18,17 +18,17 @@ age = 29;
 
 // console.log(isOld);
 
-const sum = (a: number, b: number = 1) => a + b;
+// const sum = (a: number, b: number = 1) => a + b;
 
-const printOutput: (a: number | string) => void = output => console.log(output);
+// const printOutput: (a: number | string) => void = output => console.log(output);
 
-printOutput(sum(2, 5));
+// printOutput(sum(2, 5));
 
-const btn = document.querySelector('button');
+// const btn = document.querySelector('button');
 
-if (btn) {
-  btn.addEventListener('click', event => console.log(event));
-}
+// if (btn) {
+//   btn.addEventListener('click', event => console.log(event));
+// }
 
 // SPREAD OPERATOR
 
@@ -44,3 +44,11 @@ const prsn = {
 };
 
 const copiedPerson = { ...prsn };
+
+// REST PARAMETERS
+
+const sum = (...numbers: number[]) => numbers.reduce((curResult, curValue) => curResult + curValue, 0);
+
+const addedNumbers = sum(5, 10, 2, 3.7);
+
+console.log(addedNumbers);
