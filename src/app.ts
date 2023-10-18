@@ -29,3 +29,18 @@ const btn = document.querySelector('button');
 if (btn) {
   btn.addEventListener('click', event => console.log(event));
 }
+
+// SPREAD OPERATOR
+
+const hobbies = ['Sports', 'Cooking'];
+
+const activeHobbies = ['Hiking'];
+
+activeHobbies.push(...hobbies);
+
+const prsn = {
+  firstName: 'Max',
+  age: 30
+};
+
+const copiedPerson = { ...prsn };
