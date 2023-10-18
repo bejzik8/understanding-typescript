@@ -108,7 +108,8 @@
   },
   "exclude": [
     "node_modules", // woulde be the default if not specified
-    "basics-and-basic-types"
+    "basics-and-basic-types",
+    "compiler-options",
   ],
   // "include": [
   //   "app.ts",
