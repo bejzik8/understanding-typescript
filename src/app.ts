@@ -51,7 +51,16 @@ const fetchedUserData = {
   job: { title: 'CEO', description: 'My own company' }
 };
 
+// Optional Chainning
+
 console.log(fetchedUserData?.job?.title);
+
+// Nullish Coalescing
+
+const userInput2 = '';
+
+const storedData1 = userInput2 || 'DEFAULT'; // value: ''
+const storedData2 = userInput2 ?? 'DEFAULT'; // value: 'DEFAULT'
 
 type UnknownEmployee = Employee | Admin;
 
