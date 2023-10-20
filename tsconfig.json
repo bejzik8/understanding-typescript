@@ -108,9 +108,11 @@
   },
   "exclude": [
     "node_modules", // woulde be the default if not specified
-    "basics-and-basic-types",
-    "classes-and-interfaces",
-    "compiler-options",
+    "2-basics-and-basic-types",
+    "3-compiler-options",
+    "4-next-gen-js-and-ts",
+    "5-classes-and-interfaces",
+    "6-advanced-types",
   ],
   // "include": [
   //   "app.ts",
