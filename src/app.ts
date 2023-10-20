@@ -23,7 +23,15 @@ type Numeric = number | boolean;
 
 type Universal = CombinableT & Numeric; // number
 
-function adds(a: number, b: number) {
+
+
+// Function Overloads
+
+function adds(a: number, b: number): number;
+function adds(a: string, b: string): string;
+function adds(a: string, b: number): string;
+function adds(a: number, b: string): string;
+function adds(a: CombinableT, b: CombinableT) {
   // type guard
   if (typeof a === 'string' || typeof b === 'string') {
     return a.toString() + b.toString()
@@ -31,6 +39,9 @@ function adds(a: number, b: number) {
 
   return a + b;
 }
+
+const res1 = adds('Mirko', 'Nikola');
+res1.split(' ');
 
 type UnknownEmployee = Employee | Admin;
 
