@@ -20,7 +20,7 @@ interface Greetable extends Named {
   greet(phrase: string): void;
 }
 
-class Person implements Greetable {
+class Person1 implements Greetable {
   name?: string;
   outputName?: string | undefined;
   age = 30;
@@ -50,7 +50,7 @@ let user1: Greetable;
 //   }
 // }
 
-user1 = new Person();
+user1 = new Person1();
 // user1.name = 'Nikola';
 
 user1.greet('Hi there - I am');
