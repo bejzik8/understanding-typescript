@@ -113,6 +113,7 @@
     "4-next-gen-js-and-ts",
     "5-classes-and-interfaces",
     "6-advanced-types",
+    "7-generics",
   ],
   // "include": [
   //   "app.ts",
