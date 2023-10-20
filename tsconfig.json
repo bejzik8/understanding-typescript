@@ -109,6 +109,7 @@
   "exclude": [
     "node_modules", // woulde be the default if not specified
     "basics-and-basic-types",
+    "classes-and-interfaces",
     "compiler-options",
   ],
   // "include": [
