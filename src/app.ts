@@ -43,6 +43,16 @@ function adds(a: CombinableT, b: CombinableT) {
 const res1 = adds('Mirko', 'Nikola');
 res1.split(' ');
 
+const res2 = adds('Mirko', 30);
+
+const fetchedUserData = {
+  id: 'u1',
+  name: 'Mirko',
+  job: { title: 'CEO', description: 'My own company' }
+};
+
+console.log(fetchedUserData?.job?.title);
+
 type UnknownEmployee = Employee | Admin;
 
 function printEmployeeInformation(emp: UnknownEmployee) {
