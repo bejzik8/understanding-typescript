@@ -15,14 +15,20 @@ function Logger(logString: string) {
 function WithTemplate(template: string, hookId: string) {
   console.log('TEMPLATE FACTORY');
 
-  return function (constructor: any) {
-    const hookEl = document.getElementById(hookId);
+  return function<T extends { new(...args: any[]): { name: string } }>(originalConstuctor: T) {
+    return class extends originalConstuctor {
+      constructor(..._: any[]) {
+        super();
 
-    const person = new constructor();
+        console.log('Rendering template');
 
-    if (hookEl) {
-      hookEl.innerHTML = template;
-      hookEl.querySelector('h1')!.textContent = person.name;
+        const hookEl = document.getElementById(hookId);
+
+        if (hookEl) {
+          hookEl.innerHTML = template;
+          hookEl.querySelector('h1')!.textContent = this.name;
+        }
+      }
     }
   }
 }
@@ -91,3 +97,7 @@ class Product {
     return this.price * (1 + tax);
   }
 }
+
+
+const p1 = new Product('Book', 19);
+const p2 = new Product('Book 2', 29);
